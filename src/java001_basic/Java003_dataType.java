@@ -1,4 +1,4 @@
-package java1005_basic;
+package java001_basic;
 
 /*
   리터널(literal) : 그 자체의 값(1,2,3,..., 'a','b','c',...,true,false)
@@ -39,7 +39,7 @@ public class Java003_dataType {
 		//오류. 데이터타입의 크기가 int 보다 double이 크기때문에
 		double ko = 4.0f;
 		
-		int x = 0101; //맨 앞자리에 0을 입력하면 8진수이다.
+		int x = 0101; //8진수
 		System.out.println(x);
 
 		int y = 65; //10진수

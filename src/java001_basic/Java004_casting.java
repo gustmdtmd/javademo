@@ -1,4 +1,4 @@
-package java1005_basic;
+package java001_basic;
 
 /*
  * Ctrl + SpaceBar  : 자동완성
