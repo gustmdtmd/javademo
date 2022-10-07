@@ -17,8 +17,10 @@ public class Prob_04 {
 
 		// 여기를 구현하시오
 		for (int i = 0; i < num.length; i++) {
-			System.out.printf("%c", num[i]*'@');
-
+			for(int j=0; j<num[i]; j++) {
+				System.out.printf("%c", '@');
+			}
+			System.out.printf("\n");
 		}
 	}// end main()
 

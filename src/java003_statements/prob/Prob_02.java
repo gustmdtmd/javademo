@@ -12,11 +12,10 @@ public class Prob_02 {
 
 	public static void main(String[] args) {
 		for (int year = 2001; year <= 2012; year++) {
-			boolean leapYear = !(year % 4 == 0 && year != 100 || year % 400 == 0);
+			boolean leapYear = year % 4 == 0 && year != 100 || year % 400 == 0;
 			if (leapYear) {
-				continue;
+				System.out.println(year);
 			}// if end
-			System.out.println(year);
 		}//for end
 
 	}// end main()
