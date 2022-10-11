@@ -8,7 +8,6 @@ package java004_array.prob;
  * 12  15  18  45
  */
 
-
 public class Prob_02 {
 
 	public static void main(String[] args) {
@@ -16,32 +15,30 @@ public class Prob_02 {
 		int cnt = 1;
 
 		// 여기를 구현하시오.
-		
-		//data[3][j] 및 data[i][3] 외 배열 값 넣어주기.
-		for(int i=0; i<data.length-1; i++) {
-			for(int j=0; j<data[i].length-1; j++) {
-				data[i][j]=cnt++;
+
+		// data[3][j] 및 data[i][3]을 제외한 배열 값 넣어주기
+		for (int i = 0; i < data.length - 1; i++) {
+			for (int j = 0; j < data[i].length - 1; j++) {
+				data[i][j] = cnt++;
 			} // for end
 		} // for end
 
-		//data[3][j] 및 data[i][3] 연산하고 값 넣어주기
-		for(int i=0; i<data.length-1; i++) {
-			for(int j=0; j<data[i].length-1; j++) {
-				data[3][j]+=data[i][j];
-				data[i][3]+=data[j][i];
-			} //for end
-			data[3][3]+=data[i][3];
-		} //for end
-		
-		//배열 출력하기
-		for(int i=0; i<data.length; i++) {
-			for(int j=0; j<data[i].length; j++) {
+		// data[3][j] 및 data[i][3] 값 넣어주기
+		for (int i = 0; i < data.length - 1; i++) {
+			for (int j = 0; j < data[i].length - 1; j++) {
+				data[3][i] += data[i][j];
+				data[i][3] += data[j][i];
+			} // for end
+			data[3][3] += data[3][i];
+		} // for end
+
+		// data 배열 출력
+		for (int i = 0; i < data.length; i++) {
+			for (int j = 0; j < data[i].length; j++) {
 				System.out.printf("%4d", data[i][j]);
-			}// for end
+			} // for end
 			System.out.printf("\n");
-		}// for end
-		
-		
+		} // for end
 	}// end main()
 
 }// end class
