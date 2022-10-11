@@ -11,16 +11,18 @@ public class Prob006_method {
 
 	private static void primeNumber(int num) {
 		// 구현하세요.
-		int[] data = new int[num];
-		int cnt=1;
-		System.out.println(2);
-		System.out.println(3);
-		for(int i = 0; i<num; i++) {
-			data[i]=cnt++;
-			if(data[i]>=2 && data[i]%2 != 0 && data[i]%3 != 0 ) {
-				System.out.println(data[i]);
-			}
-		}
-		
+
+		for (int i = 2; i <= num; i++) {
+			for (int j = 2; j <= i; j++) {
+				if (i % j == 0) {
+					if (i == j) {
+						System.out.printf(i + ", ");
+					} else {
+						break;
+					} // if end
+				} // if end
+			} // for end
+		} // for end
+
 	}// end primeNumber( )
 }// end class

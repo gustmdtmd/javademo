@@ -31,11 +31,11 @@ public class Prob001_method {
 		int[] result = new int[array1.length + array2.length];
 
 		for(int i = 0; i<array1.length; i++) {
-			result[i] = array1[i];
-		}// for end
-		
-		for(int i = 0; i<array2.length; i++) {
-			result[i+array1.length] = array2[i];
+			if(i<array1.length) {
+				result[i]=array1[i];
+			}else {
+				result[i]=array2[i-array1.length];
+			}
 		}// for end
 		
 		return result;
