@@ -10,28 +10,40 @@ class Java{
 	String name;
 	int r;
 	
-	double area() {
+	
+	public double area() {
 	return r*r*3.14;
 	}
 	
-	public Java(String name, int r) {
-		this.name = name;
-		this.r = r;
-	}
-	
-	public void display() {
-		System.out.printf("자바%s의 면적은 %.1f\n", name, area());
-	}
+//	public Java(String name, int r) {
+//		this.name = name;
+//		this.r = r;
+//	}
+//	
+//	public void display() {
+//		System.out.printf("자바%s의 면적은 %.1f\n", name, area());
+//	}
 }
 public class Prob01_class {
 
 	public static void main(String[] args) {
 		//여기를 구현하세요.////////////////////	
-		Java pizza = new Java("피자", 10);
-		pizza.display();
+//		Java pizza = new Java("피자", 10);
+//		pizza.area();
+//		
+//		Java donut = new Java("도넛", 2);
+//		donut.area();
 		
-		Java donut = new Java("도넛", 2);
-		donut.display();
+		Java pizza = new Java();
+		pizza.name = "자바피자";
+		pizza.r = 10;
+		
+		Java donut = new Java();
+		donut.name = "자바도넛";
+		donut.r = 2;
+		
+		System.out.printf("%s의 면적은 %.1f\n", pizza.name, pizza.area());
+		System.out.printf("%s의 면적은 %.1f\n", donut.name, donut.area());
 		
 	}//end main()
 

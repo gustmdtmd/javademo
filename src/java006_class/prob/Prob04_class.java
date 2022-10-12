@@ -20,10 +20,6 @@ class Office {
 	}
 
 	// 프로그램을 컴파일할때 정상적으로 수행이 되도록 생성자를 정의하시오.
-	public Office() {
-		this(2);
-	}
-	
 	public Office(int num, int jumsu) {
 		this.num = num;
 		this.jumsu = jumsu;
@@ -58,7 +54,6 @@ public class Prob04_class {
 		Office p1 = new Office(1, 90);
 		Office p2 = new Office(2, 65);
 		Office p3 = new Office(3, 85);
-		Office p4 = new Office();
 		p1.process();
 		p2.process();
 		p3.process();
