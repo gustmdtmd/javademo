@@ -24,12 +24,6 @@ class Box {
 
 	public void draw() { // 박스 그리는 메소드
 		///////////// 여기에서 구현하세요.
-//		for(int i=1; i<=width; i++) {
-//			if(fillChar != i) {
-//				System.out.printf("%c", fillChar);
-//			}
-//		}
-//		System.out.printf("\n");
 		
 		for(int i=1; i<=height; i++) {
 			for(int j=1; j<=width; j++) {

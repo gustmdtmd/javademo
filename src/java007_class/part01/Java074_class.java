@@ -1,4 +1,4 @@
-package java007_class.part1;
+package java007_class.part01;
 //"Nikon", 400000, 30, 50
 //"Sony", 450000, 20, 35
 //"Fujifilm", 350000, 10, 25
@@ -22,10 +22,25 @@ public class Java074_class {
 //		goods[1].display();
 //		goods[2].display();
 		
-		for(int i=0; i<goods.length; i++) {
-			goods[i].display();
-		}// for end
+//		for(int i=0; i<goods.length; i++) {
+//			goods[i].display();
+//		}// for end
+		
+		process(goods);
 		
 	}//main() end
 
+	
+	public static void process(Goods[] goods) {
+		for(int i=0; i<goods.length; i++) {
+			goods[i].display();
+		}// for end
+	}
+	
+	
+	
+	
 }//class end
+
+
+

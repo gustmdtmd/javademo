@@ -1,4 +1,4 @@
-package java007_class.part1;
+package java007_class.part01;
 
 public class Goods {
 	String name; //상품명
