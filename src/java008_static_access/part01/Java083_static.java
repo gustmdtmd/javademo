@@ -25,6 +25,8 @@ public class Java083_static {
 		System.out.printf("se.x=%d, se.y=%d\n", se.x, se.y);
 		System.out.printf("ss.x=%d, ss.y=%d\n", ss.x, ss.y);
 		
+		//주소값이 같다.
+		System.out.println(se.y == ss.y);
 		
 	}// main() end
 

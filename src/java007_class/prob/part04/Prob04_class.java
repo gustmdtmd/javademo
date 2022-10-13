@@ -22,19 +22,18 @@ public class Prob04_class {
 
 	public static void display(BookShop[] shop) {
 		// code별 가격 합계를 구하는 프로그램을 구현하시오.
-		int total = 0;
-		String[] search = { "컴퓨터", "소설" };
+		int ctotal = 0;
+		int btotal = 0;
 
-		for (int j = 0; j < search.length; j++) {
-			total=0;
-			for (int i = 0; i < shop.length; i++) {
-				if (shop[i].code == search[j]) {
-					total += shop[i].price;
-				}
+		for (int i = 0; i < shop.length; i++) {
+			if(shop[0].code == shop[i].code) {
+				ctotal += shop[i].price;
+			}else {
+				btotal += shop[i].price;
 			}
-			System.out.printf("%s %d\n", search[j], total);
 		}
-		
+		System.out.println("컴퓨터" + ctotal);
+		System.out.println("소설" + btotal);
 	}// end display()
 
 }// end class

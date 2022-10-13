@@ -24,10 +24,7 @@ public class Employee {
 	private int pay; // 받는급여
 	private double score; // 입사점수
 	
-	public Employee() {
-		
-	}
-	
+
 	public void setEmployee(String name, String dept, int pay, double score) {
 		this.name = name;
 		this.dept = dept;
