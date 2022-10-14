@@ -12,7 +12,8 @@ public class Basketball {
 	}
 	
 	public void res() {
-		System.out.printf("%s님은 3점 %d개, 2점 %d개로 총 합 %d점으로 %c등급입니다.");
+		System.out.printf("%s님은 3점 %d개, 2점 %d개입니다.\n",
+				name, three, two);
 	}
 	
 	

@@ -18,7 +18,12 @@ package java009_inheritance.part005;
 public class Java_prob {
 
 	public static void main(String[] args) {
+		Score[] score = new Score[2];
+		score[0] = new Score("홍길동", 6, 7);
+		score[1] = new Score("이순신", 9, 10);
 		
+		score[0].res();
+		score[1].res();
 
 	}
 
