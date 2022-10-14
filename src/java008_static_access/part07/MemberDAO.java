@@ -9,7 +9,7 @@ public class MemberDAO {
 	public static MemberDAO getInstance() {
 		return dao;
 		//return new MemberDAO();
-		//=> 싱글톤패턴이 아니다. new 생성하기때문에 주소값이 달라진다
+		//=> 싱글톤패턴이 아니다. new 생성하기때문에 호출때마다 새로운 주소값을 생성.
 	}
 	
 	public void display() {

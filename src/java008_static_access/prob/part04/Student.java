@@ -74,6 +74,7 @@ public class Student {
 	public char getGrade() {
 		
 		int avg = ((int)getAvg())/10;
+		
 		switch(avg) {
 		case 10:
 		case 9: return 'A'; 

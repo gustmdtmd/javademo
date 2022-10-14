@@ -25,7 +25,7 @@ public class Java90_singleton {
 		MemberDAO mc = MemberDAO.getInstance();
 		mc.display();
 		
-		//주소값이 같음.
+		//주소값이 같음. true
 		System.out.println(md==mc);
 		
 		}//main() end
