@@ -21,7 +21,7 @@ package java009_inheritance.part005;
  *    홍길동님은 3점 6개 , 2점 7개로 총 합 64점으로 'D'등급입니다.
  *    이순신님은 3점 9개 , 2점 10개로 총 합 94점으로 'A'등급입니다.
  */
-public class Test_basketball {
+public class Prob005_Test {
 	
 	public static void main(String[] args) {
 		Running[] running = new Running[3];
