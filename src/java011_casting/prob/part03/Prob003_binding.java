@@ -22,9 +22,12 @@ public class Prob003_binding {
 		};
 		
 		for(int i=0; i<mb.length; i++) {
-			System.out.println(mb[i].toString());
+			display(mb[i]);
 		}
 
 	}//end main()
-
+	
+	public static void display(Member mem) {
+		System.out.println(mem.toString());
+	}
 }//end class

@@ -14,7 +14,7 @@ public class Staff extends Person {
 		
 		char data=jumin.charAt(6);
 		
-		if(data=='1') {
+		if(data=='1' || data=='3') {
 			return '남';
 		}else {
 			return '여';
@@ -29,8 +29,8 @@ public class Staff extends Person {
 		//1,2 => 19+year   3,4=>20+year
 		//if(jumin.charAt(7)=='1')
 		//int num=Integer.parseInt(year);
-		String year = jumin.substring(0,2);
-		if(jumin.charAt(6)=='1' || jumin.charAt(6)=='2') {
+		String year = getJumin().substring(0,2);
+		if(getJumin().charAt(6)=='1' || getJumin().charAt(6)=='2') {
 			return Integer.parseInt("19"+year);
 		}else {
 			return Integer.parseInt("20"+ year);	
