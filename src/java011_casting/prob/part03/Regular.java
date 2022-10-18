@@ -1,16 +1,18 @@
 package java011_casting.prob.part03;
 
 public class Regular extends Member {
+	int total;
 	int extra;
 
-	public Regular(String name, String dept, String grade, int extra) {
+	public Regular(String name, String dept, String grade, int total, int extra) {
 		super(name, dept, grade);
+		this.total = total;
 		this.extra = extra;
 	}
 	
 	@Override
 	public int pay() {
-		int RTotal = 450000+extra;
+		int RTotal = total+extra;
 		return RTotal;
 	}
 	

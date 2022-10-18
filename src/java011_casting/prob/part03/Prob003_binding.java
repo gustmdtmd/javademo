@@ -17,7 +17,7 @@ package java011_casting.prob.part03;
 public class Prob003_binding {
 
 	public static void main(String[] args) {
-		Member[] mb = new Member[] { new Regular("홍길동", "영업부", "정직원", 1000), 
+		Member[] mb = new Member[] { new Regular("홍길동", "영업부", "정직원", 450000, 1000), 
 				new Contract("갑동이", "기획부", "계약직", 20, 10000)
 		};
 		
