@@ -16,7 +16,7 @@ public class Java140_Scanner {
 		
 		//String name = sc.next(); //한 단어
 		String name = sc.nextLine(); //한 라인
-		System.out.println(name);
+		//System.out.println(name);
 		
 	}//main() end
 
