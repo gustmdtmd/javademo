@@ -38,15 +38,25 @@ public class Prob004_Calendar {
 		int[][] data = new int[6][7];
 		Calendar cal = Calendar.getInstance();
 		int endDate = cal.getActualMaximum(Calendar.DATE);
-		cal.set(year, month,1);
-		cal.get(Calendar.DAY_OF_WEEK);
+		cal.set(year, month - 1, 1);
+		int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
 		cal.set(Calendar.DATE, 1);
-		for(int i=0; i<data.length; i++) {
-			for(int j=0; j<data[i].length; j++) {
-				data[i][j] += Calendar.DATE+j;
+		for (int i = 1; i <= endDate; i++) {
+			if (i == 1) {
+				for (int j = 1; j < dayOfWeek; j++) {
+					System.out.print("   ");
+				}
 			}
+			if (i < 10) {
+				System.out.println(" ");
+			}
+			System.out.println(" " + i + " ");
+			if (dayOfWeek % 7 == 0) {
+				System.out.println();
+			}
+			dayOfWeek++;
 		}
-		
+
 		return data;
 	}
 
@@ -54,8 +64,7 @@ public class Prob004_Calendar {
 		System.out.printf("%10d년도  %6d월\n", year, month);
 
 		System.out.println("  일    월    화    수    목    금    토");
-		
-
+		System.out.print(arr);
 	}// end prn()
 
 }// end class
