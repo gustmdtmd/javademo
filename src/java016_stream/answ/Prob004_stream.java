@@ -1,12 +1,10 @@
-package java016_stream.prob;
+package java016_stream.answ;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 
 /*
  * [문제]
@@ -25,15 +23,15 @@ import java.util.Scanner;
 public class Prob004_stream {
 	public static void main(String[] args) {
 		// 프로그램을 구현하시오.
-		int cnt = 0;
 		int sum = 0;
 		double avg = 0.0;
+		int cnt = 0;
 		FileReader fr = null;
 		BufferedReader br = null;
-		FileWriter fw = null;
-
+		FileWriter fw=null;
+		
 		try {
-			fr = new FileReader(".\\src\\java016_stream\\prob\\jumsu.txt");
+			fr = new FileReader(".\\src\\java016_stream\\answ\\jumsu.txt");
 			br = new BufferedReader(fr);
 			String line;
 			while ((line = br.readLine()) != null) {
@@ -42,12 +40,12 @@ public class Prob004_stream {
 					sum += Integer.parseInt(str[1]);
 					cnt++;
 				}
-
 			}
+
 			avg = sum / (double) cnt;
 
 			avg = Math.floor(avg * 10) / 10;
-			
+
 			System.out.println("program end");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -63,15 +61,17 @@ public class Prob004_stream {
 		}
 
 		try {
-			fw = new FileWriter(".\\src\\java016_stream\\prob\\jumsu.txt", true);
+			fw = new FileWriter(".\\src\\java016_stream\\answ\\jumsu.txt", true);
 			fw.write("\r\n총점:" + sum + "\r\n");
 			fw.write("평균:" + avg + "\r\n");
+			
+
 		} catch (IOException e) {
 			e.printStackTrace();
-		} finally {
+		}finally{
 			try {
 				fw.close();
-			} catch (IOException e) {
+			} catch (IOException e) {				
 				e.printStackTrace();
 			}
 		}
