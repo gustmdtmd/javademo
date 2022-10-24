@@ -31,7 +31,7 @@ import java.util.Scanner;
 public class Prob003_ArrayList {
 
 	public static void main(String[] args) {
-		String pathFile=".\\src\\java0412_collection\\prob\\phone.txt";
+		String pathFile=".\\src\\java017_collection\\prob\\phone.txt";
 		ArrayList<SmartPhone> phoneList = phoneProduct(pathFile);
 		prnDisplay(phoneList);
 	}//end main()
@@ -47,18 +47,31 @@ public class Prob003_ArrayList {
 				String[] line = sc.nextLine().split(":");
 				SmartPhone sm = new SmartPhone();
 				sm.setProductId(line[0]);
+				sm.setName(line[1]);
+				sm.setPrice(Integer.parseInt(line[2]));
+				sm.setAmount(Integer.parseInt(line[3]));
+				sm.setMaker(line[4]);
+				sp.add(sm);
 			}
+			sc.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} 
 		
 		
-		return null;
+		return sp;
 	}//end phoneProduct( )
 	
 	private static void prnDisplay(ArrayList<SmartPhone> phoneList){
-		//phoneList매개변수의 저장된 값을 출력하는 프로그램을 구현하시오.	
-
+		//phoneList매개변수의 저장된 값을 출력하는 프로그램을 구현하시오.
+		for(int i=0; i<phoneList.size(); i++) {
+		System.out.printf("\n<< %d 번째 상품>>\n" , i+1);
+		System.out.println("제품 아이디 : " + phoneList.get(i).getProductId());
+		System.out.println("제품명 : " + phoneList.get(i).getName());
+		System.out.println("가격 : " + phoneList.get(i).getPrice());
+		System.out.println("수량 : " + phoneList.get(i).getAmount());
+		System.out.println("제조사 : " + phoneList.get(i).getMaker());
+		}
 	}//end prnDisplay( )
 
 }//end class

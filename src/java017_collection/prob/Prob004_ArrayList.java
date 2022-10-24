@@ -1,6 +1,7 @@
 package java017_collection.prob;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /*
  * 2 
@@ -20,9 +21,19 @@ public class Prob004_ArrayList {
 
 	public static ArrayList<Integer> merge(int[] arr, int[] num) {
 		// arr,num배열을 병합한후 2의 배수만 리턴하는 프로그램을 구현하시오.
+		int[] data = new int [arr.length + num.length];
+		System.arraycopy(arr, 0, data, 0, arr.length);
+		System.arraycopy(num, 0, data, arr.length, num.length);
+		ArrayList<Integer> aList = new ArrayList<Integer>();
+		for(int i=0; i<data.length; i++) {
+			if(data[i]%2 == 0) {
+				aList.add(data[i]);
+			}
+		}
 		
 		
-		return null;
+		
+		return aList;
 
 	}// end merge();
 

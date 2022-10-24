@@ -25,7 +25,17 @@ public class Prob006_ArrayList {
 	
 	public static void prnDisplay(ArrayList<Kospi> aList){
 		//상승 종목을 출력하는 프로그램을 구현하시오.
-		
+		for(Kospi kp : aList) {
+			String fc = kp.getFluctuation();
+			int open = fc.indexOf('[');
+			int close = fc.indexOf(']');
+			if(fc.substring(0, open).equals("상승가")) {
+				System.out.println("주가종목 : " + kp.getStock());
+				System.out.println("현재가격 : " + kp.getPrice());
+				System.out.println("등락가격 : " + kp.getFluctuation());
+				System.out.println();
+			}
+		}
 		
 		
 	}//end prnDispaly()
