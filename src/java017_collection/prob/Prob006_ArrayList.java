@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * 현재가격 : 10000
  * 등락가격 : 2000
  * 
- * 주가종목 : JHTA
+ * 주가종목 : NAVER
  * 현재가격 : 7000
  * 등락가격 : 2500
  */
@@ -19,7 +19,7 @@ public class Prob006_ArrayList {
 		 aList.add(new Kospi("삼성전자",10000,"상승가[2000]"));
 		 aList.add(new Kospi("현대차",8000,"하락가[-1000]"));
 		 aList.add(new Kospi("POSCO",8500,"보합[0]"));
-		 aList.add(new Kospi("JHTA",7000,"상승가[2500]"));	
+		 aList.add(new Kospi("NAVER",7000,"상승가[2500]"));	
 		 prnDisplay(aList);
 	}//end main()
 	
@@ -27,14 +27,16 @@ public class Prob006_ArrayList {
 		//상승 종목을 출력하는 프로그램을 구현하시오.
 		for(Kospi kp : aList) {
 			String fc = kp.getFluctuation();
-			int open = fc.indexOf('[');
-			int close = fc.indexOf(']');
-			if(fc.substring(0, open).equals("상승가")) {
-				System.out.println("주가종목 : " + kp.getStock());
-				System.out.println("현재가격 : " + kp.getPrice());
-				System.out.println("등락가격 : " + kp.getFluctuation());
+			int first = fc.indexOf('[');
+			int end = fc.indexOf(']');
+			if(fc.substring(0, first).equals("상승가")) {
+			//if(fc.contains("상승")) {
+				System.out.println("주가품목:" + kp.getStock());
+				System.out.println("현재가격:" + kp.getPrice());
+				System.out.println("등락가격:" + kp.getFluctuation().substring(first+1,end));
 				System.out.println();
 			}
+			
 		}
 		
 		
