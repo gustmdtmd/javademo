@@ -1,0 +1,8 @@
+package java020_thread.prob;
+
+public class KoreanThread {
+
+	public KoreanThread() {
+
+	}
+}
