@@ -7,6 +7,20 @@ public class Prob002_thread {
 		EnglishUpperThread t2=new EnglishUpperThread();
 		KoreanThread t3=new KoreanThread();
 
+		try {
+			t1.start();
+			t1.join();
+		} catch (InterruptedException e) {}
+			System.out.println();
+		try {
+			t2.start();
+			t2.join();
+		} catch (InterruptedException e) {}
+		System.out.println();
+		try {
+			t3.start();
+			t3.join();
+		} catch (InterruptedException e) {}
 	}//end main()
 
 }//end class

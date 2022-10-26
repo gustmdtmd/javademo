@@ -1,18 +1,23 @@
 package java020_thread.prob;
 
-public class Producer extends Thread {
+public class Producer implements Runnable {
 	private VendingMachine vm;
-	
-	public Producer() {
-
-	}
 
 	public Producer(VendingMachine vm) {
-		this.vm=vm;
+		this.vm = vm;
 	}
-	
+
 	@Override
 	public void run() {
-	vm.putDrink(getName());
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(Thread.currentThread().getName() + " : 음료수 No. " + i + "넣음");
+			vm.putDrink("음료수 No. " + i);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+		}
 	}
 }

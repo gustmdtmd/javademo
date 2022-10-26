@@ -1,19 +1,24 @@
 package java020_thread.prob;
 
+import java.util.Stack;
+
 public class VendingMachine {
+	Stack<String> store = new Stack<String>();
 
-	public VendingMachine() {
-
-	}
-
-	public String getDrink() {
-
-		return null;
-	}
-
-	public void putDrink(String drink) {
-		for (int i = 1; i <= 10; i++) {
-			System.out.printf("%s : 음료수 No. %d 자판기에 넣기\n", Thread.currentThread().getName(), i);
+	public synchronized String getDrink() {
+		while(store.isEmpty()) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
+		return store.pop().toString();
+	}
+	
+	// For producer(생산)
+	public synchronized void putDrink(String drink) {
+		store.push(drink);
+		notifyAll();
 	}
 }

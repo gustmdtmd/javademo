@@ -11,7 +11,6 @@ public class Prob001_thread {
 		Thread t1 = new Thread(p, "생산자");
 		Thread t2 = new Thread(c, "소비자");
 
-		
 		t1.start();
 		t2.start();
 	}// end main()
