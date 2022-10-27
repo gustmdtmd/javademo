@@ -1,14 +1,12 @@
 package ncs.test10;
 
-public abstract class Employee {
+abstract class Employee {
 	private String name;
 	private int number;
 	private String department;
 	private int salary;
 	
-	public Employee() {
-	
-	}
+	public Employee() {}
 
 	public Employee(String name, int number, String department, int salary) {
 		this.name = name;
@@ -17,7 +15,9 @@ public abstract class Employee {
 		this.salary = salary;
 	}
 	
-	public abstract double tax();
+	public double tax() {
+		return number;
+	}
 
 	public String getName() {
 		return name;

@@ -2,20 +2,19 @@ package ncs.test10;
 
 public class Sales extends Employee implements Bouns {
 	public Sales() {
-
 	}
 
 	public Sales(String name, int number, String department, int salary) {
 		super(name, number, department, salary);
 	}
-	
-	@Override
+
 	public double tax() {
-	
-		return 0;
+		return super.getSalary() * 0.13;
 	}
-	
-	public void incetive(int pay) {
-		
+
+	@Override
+	public void incentive(int pay) {
+		int sum = (int) (getSalary() + pay * 1.2);
+		setSalary(sum);
 	}
 }

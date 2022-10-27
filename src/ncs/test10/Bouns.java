@@ -1,7 +1,5 @@
 package ncs.test10;
 
-public interface Bouns {
-	public static void incentive(int pay) {
-		
-	}
+interface Bouns {
+	public void incentive(int pay);
 }

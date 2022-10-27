@@ -18,7 +18,8 @@ public class Java102_abstract {
 
 	public static void main(String[] args) {
 		//CarAbs car = new CarAbs(); //추상클래스는 객체생성을 할 수 없다.
-		SenndaAbs sa = new SenndaAbs();
+		SenndaAbs sa = new SenndaAbs(150, "black", 8);
+		sa.display();
 		sa.work();
 		
 		TruckAbs ta = new TruckAbs();

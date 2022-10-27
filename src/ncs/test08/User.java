@@ -1,15 +1,15 @@
 package ncs.test08;
 
-public class User {
+public class User implements Cloneable{
 	private String id;
 	private String password;
 	private String name;
 	private int age;
 	private char gender;
 	private String phone;
-	
+
 	public User() {
-	
+		super();
 	}
 
 	public User(String id, String password, String name, int age, char gender, String phone) {
@@ -19,19 +19,6 @@ public class User {
 		this.age = age;
 		this.gender = gender;
 		this.phone = phone;
-	}
-	
-	
-	public String toString() {
-		return String.format("%s %s %s %d %c %s", id, password, name, age, gender, phone);
-	}
-	
-	public boolean equals(Object obh) {
-		return false;
-	}
-	
-	public Object clone() {
-		return null;
 	}
 
 	public String getId() {
@@ -81,6 +68,16 @@ public class User {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	
-	
+
+	public String toString() {
+		return String.format("%s %s %s %d %c %s", id, password, name, age, gender, phone);
+	}
+
+	public boolean equals(Object obj) {
+		return this.toString().equals(obj.toString());
+	}
+
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
 }

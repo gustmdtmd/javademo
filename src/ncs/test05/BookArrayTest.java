@@ -13,7 +13,7 @@ public class BookArrayTest {
 		int sale = 0;
 		for(Book arr : bArray) {
 			 sale += arr.getPrice()-(int)(arr.getPrice()*arr.getDiscountRate()); 
-			 System.out.printf("%s,%s,%d,%s원,%.0f%%할인\n", 
+			 System.out.printf("%s,%s,%d원,%s,%.0f%%할인\n", 
 						arr.getTitle(), arr.getAuthor(), arr.getPrice(), arr.getPublisher(), arr.getDiscountRate()*100);
 				System.out.printf("할인된 가격 : %d 원\n",sale);
 				sale=0;

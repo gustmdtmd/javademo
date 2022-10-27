@@ -4,7 +4,7 @@ public class Java091_encapsulation {
 
 	public static void main(String[] args) {
 		Time time = new Time();
-		time.setHour(12);
+		time.setHour(22);
 		time.setMinute(10);
 		time.setSecond(20);
 		

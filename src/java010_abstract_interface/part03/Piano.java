@@ -5,8 +5,8 @@ public class Piano extends Instrument {
 	
 	}
 	
-	public Piano(String piano) {
-		super(piano);
+	public Piano(String name) {
+		super(name);
 	}
 	
 	@Override

@@ -8,6 +8,11 @@ abstract public class CarAbs {
 	
 	}
 	
+	public CarAbs(int speed, String color) {
+		this.speed = speed;
+		this.color = color;
+	}
+	
 	abstract public void work(); //추상메소드(abstract method)
 	
 	public void display() {

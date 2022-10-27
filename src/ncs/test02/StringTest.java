@@ -6,7 +6,7 @@ public class StringTest {
 		String str = "1.22,4.12,5.93,8.71,9.34";
 		double[] data = new double[5];
 		double sum = 0;
-		
+		int cnt  = 0;
 		//str에서 데이터를 분리한다.
 		String[] st = str.split(",");
 
@@ -14,8 +14,9 @@ public class StringTest {
 			//배열에 실수 데이터를 넣는다.
 			//배열 데이터의 합을 구한다.
 			sum += Double.parseDouble(sg);
+			cnt++;
 		}
-		double avg = sum/st.length;
+		double avg = sum/cnt;
 		
 		System.out.printf("%.3f\n", sum);
 		System.out.printf("%.3f\n", avg);

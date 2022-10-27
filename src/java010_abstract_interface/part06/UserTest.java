@@ -10,7 +10,6 @@ public class UserTest extends User implements Score, Print {
 	public UserTest(String name, int s) {
 		super(name);
 		this.s=s;
-		
 	}
 	
 	@Override

@@ -28,9 +28,9 @@ public class Time {
 	private int hour;
 	private int minute;
 	private int second;
-	
+
 	public Time() {
-		
+
 	}
 
 	public int getHour() {
@@ -38,6 +38,7 @@ public class Time {
 	}
 
 	public void setHour(int hour) {
+		//if(hour < 0 || hour >23) return;
 		this.hour = hour;
 	}
 
@@ -56,9 +57,9 @@ public class Time {
 	public void setSecond(int second) {
 		this.second = second;
 	}
-	
-	public String toString() {		
+
+	public String toString() {
 		return String.format("%d:%d:%d", hour, minute, second);
 	}
-	
+
 }// class end

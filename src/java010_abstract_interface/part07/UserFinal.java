@@ -8,4 +8,9 @@ public class UserFinal extends FinalTest{
 	//Cannot override the final method from FinalTest
 	//void process() {}
 	
+	@Override
+	void display() {
+		super.display();
+		System.out.println("취업하자");
+	}
 }

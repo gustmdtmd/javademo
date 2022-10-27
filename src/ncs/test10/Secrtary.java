@@ -11,12 +11,12 @@ public class Secrtary extends Employee implements Bouns{
 	
 	@Override
 	public double tax() {
-	
-		return 0;
+		return getSalary() * 0.1;
 	}
 	
 	public void incentive(int pay) {
-		
+		int sum = (int)(getSalary() + pay*0.8);
+		setSalary(sum);
 	}
 	
 }

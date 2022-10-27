@@ -10,9 +10,7 @@ public class Cargoplane extends Plane {
 	}
 
 	public void flight(int distance) {
-		
-		int fuel = distance/10*50;
-		
-		System.out.println(fuel);
+		super.fuelSize -= distance*5;
+		System.out.println(super.fuelSize);
 	}
 }

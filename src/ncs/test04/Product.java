@@ -15,15 +15,6 @@ public class Product {
 		this.quantity = quantity;
 	}
 
-	public String information() {
-		String name = getName();
-		String price = String.valueOf(getPrice());
-		String quantity = String.valueOf(getQuantity());
-		String total = String.valueOf(getPrice()*getQuantity());		
-		return String.format("상품명 : %s\n가격 : %s 원\n수량 : %s 개\n총 구매 가격 : %s 원\n",
-				name, price, quantity, total);
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -48,5 +39,9 @@ public class Product {
 		this.quantity = quantity;
 	}
 	
+	public String information() {
+		return String.format("상품명 : %s\n가격 : %d 원\n수량 : %d 개\n",
+				name, price, quantity);
+	}
 
 }

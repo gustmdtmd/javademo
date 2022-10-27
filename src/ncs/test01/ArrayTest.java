@@ -9,13 +9,15 @@ public class ArrayTest {
 				{45,26,72,23,34}};
 		
 		int sum = 0;
+		int cnt = 0;
 		for(int i=0; i<array.length; i++) {
 			for(int j=0; j<array[i].length; j++) {
+				cnt++;
 				sum+=array[i][j];
 			}//end for
 		}//end for
 		
-		double avg = (double)sum/20;
+		double avg = (double)sum/cnt;
 		System.out.println((double)sum);
 		System.out.println(avg);
 	}//end main()
