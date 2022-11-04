@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class BookDAO {
@@ -188,5 +189,37 @@ public class BookDAO {
 		}
 		return num;
 	}//end deleteMethod()
+	
+	public int updateMethod(HashMap<String, Object> hmap) {
+		int chk = -1;
+		try {
+			conn = init();
+			conn.setAutoCommit(false);
+			String sql = "UPDATE book SET title=? WHERE num=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, hmap.get("title").toString());
+			pstmt.setInt(2, Integer.parseInt(hmap.get("num").toString()));
+			
+			chk = pstmt.executeUpdate();
+			
+			conn.commit();
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			} finally {
+				try {
+					conn.setAutoCommit(true);
+					exit();
+				} catch (SQLException e1) {
+					e1.printStackTrace();
+				}
+			}
+		}
+		
+		return chk;
+	}//end updateMethod()
 	
 }//end class

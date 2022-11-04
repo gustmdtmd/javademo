@@ -1,5 +1,6 @@
 package project_01;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,9 +11,9 @@ public class BookTest {
 		Scanner sc = new Scanner(System.in);
 		
 		while(true) {
-		System.out.println("=================================================");
-		System.out.println("1.책 등록 | 2.책 리스트 | 3.책 조회 | 4.책 삭제 | 5.종료");
-		System.out.println("=================================================");
+		System.out.println("==============================================================");
+		System.out.println(" 1.책 등록 | 2.책 리스트 | 3.책 조회 | 4.책 삭제 | 5.정보 수정 | 0.종료");
+		System.out.println("==============================================================");
 		System.out.println("번호 입력 => ");
 		int input = Integer.parseInt(sc.nextLine());
 		
@@ -25,6 +26,8 @@ public class BookTest {
 		}else if(input==4) {
 			deleteCall(bController, sc);
 		}else if(input==5) {
+			updateCall(bController, sc);
+		}else if(input==0) {
 			System.out.println("시스템을 종료합니다.");
 			System.exit(0);
 		}
@@ -70,6 +73,19 @@ public class BookTest {
 			System.out.printf("%d개 삭제되었습니다.\n", chk);
 		else
 			System.out.println("삭제를 실패했습니다.");
-	}
+	}//end deleteCall()
 	
+	public static void updateCall(BookController bController, Scanner sc) {
+		HashMap<String, Object> hmap = new HashMap<String, Object>();
+		System.out.println("도서 번호 입력: ");
+		hmap.put("num", Integer.parseInt(sc.nextLine()));
+		System.out.println("책 제목 입력: ");
+		hmap.put("title", sc.nextLine());
+		
+		int chk = bController.updateProcess(hmap);
+		if(chk>0) 
+			System.out.printf("%d개 수정되었습니다.\n", chk);
+		else
+			System.out.println("수정을 실패했습니다.");
+	}//end updateCall()
 }//end class

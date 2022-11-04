@@ -1,5 +1,6 @@
 package project_01;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class BookController {
@@ -24,4 +25,8 @@ public class BookController {
 	public int deleteProcess(int num) {
 		return dao.deleteMethod(num);
 	}//end deleteProcess
+	
+	public int updateProcess(HashMap<String, Object> hmap) {
+		return dao.updateMethod(hmap);
+	}//end updateProcess()
 }//end class
