@@ -19,14 +19,17 @@ public class BookTest {
 		
 		if(input==1) {
 			insertCall(bController, sc);
+			listCall(bController, sc);
 		}else if(input==2) {
 			listCall(bController, sc);
 		}else if(input==3) {
 			searchCall(bController, sc);
 		}else if(input==4) {
 			deleteCall(bController, sc);
+			listCall(bController, sc);
 		}else if(input==5) {
 			updateCall(bController, sc);
+			listCall(bController, sc);
 		}else if(input==0) {
 			System.out.println("시스템을 종료합니다.");
 			System.exit(0);
