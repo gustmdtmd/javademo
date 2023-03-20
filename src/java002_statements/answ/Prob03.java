@@ -20,28 +20,28 @@ public class Prob03 {
 	public static void main(String[] args) {
 		int salesCount = 2; // 판매수량
 		int salesMoney = 10000; // 판매단가
-		String delivery = "택배"; // 배달방법
+		String delivery = "퀵"; // 배달방법
 		int product = salesCount * salesMoney; // 물품금액
 		int deliveryMoney = 0; // 배달금액
 		int totalMoney = 0;// 총금액
 
 		// 여기에 구현하시오.
-		// if (product < 30000){
-		if (salesCount * salesMoney < 30000) {
-			if (delivery == "택배") {
-				deliveryMoney = 3000;
-			} else if (delivery == "퀵") {
+		if(product < 30000) {
+			if(delivery == "택배") {
+			deliveryMoney = 3000;
+			totalMoney = deliveryMoney + product;
+			}else if(delivery == "퀵"){
 				deliveryMoney = 12000;
+				totalMoney = deliveryMoney + product;
 			}
-		} else {
+		}else {
 			deliveryMoney = 0;
+			totalMoney = product;
 		}
-
-		totalMoney = product + deliveryMoney;
-		System.out.println("물품금액 : " + product + "원");
-		System.out.println("배달금액 : " + deliveryMoney + "원");
-		System.out.println("총  금액 : " + totalMoney + "원");
-
+		
+		System.out.println("물품금액: " + product);
+		System.out.println("배달금액: " + deliveryMoney);
+		System.out.println("총 금액: " + totalMoney);
 	}// end main()
 
 }// end class

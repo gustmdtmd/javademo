@@ -15,10 +15,10 @@ public class Prob03_class {
 		// 책이름 : JSP무조건따라하기
 		// 책저자 : 송JP
 		// 페이지 : 200페이지
-	 	Book bk = new Book("JSP무조건 따라하기", "송JP", 200);
-	 	System.out.println("책이름: " + bk.getTitle());
-	 	System.out.println("책저자: " + bk.getAuthor());
-	 	System.out.println("페이지: " + bk.getPage());
+	 	Book bk = new Book("JSP무조건따라하기", "송JP", 200);
+	 	System.out.println("책이름 : " + bk.getTitle());
+	 	System.out.println("책저자 : " + bk.getAuthor());
+	 	System.out.println("페이지 : " + bk.getPage() + "페이지");
 	}// end main()
 
 }// end class

@@ -26,15 +26,11 @@ class Office {
 	}
 
 	/////////////////////////////////////////////////////
-
 	public void count() {
-		// 점수가 80이상이면 chk에 1로 변경한다.
-		if (jumsu >= 80) {
-			chk = 1;
-		} else {
+		if (jumsu < 80)
 			chk = 2;
-		}
-
+		else
+			chk = 1;
 	}
 
 	public void prn() {

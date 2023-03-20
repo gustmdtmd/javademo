@@ -23,25 +23,20 @@ public class Prob05 {
 		String day="";
 		
 		//여기에서 구현하세요////////////////////////////////
-		
-		switch (car_num){
-		case 1:
-		case 6: day="월요일"; break;
-		case 2:
-		case 7: day="화요일"; break;
-		case 3:
-		case 8: day="수요일"; break;
-		case 4:
-		case 9: day="목요일"; break;
-		case 5:
-		case 0: day="금요일";
+		switch(car_num) {
+		case 0 :
+		case 5 : day = "금요일"; break;
+		case 1 :
+		case 6 : day = "월요일"; break;
+		case 2 :
+		case 7 : day = "화요일"; break;
+		case 3 :
+		case 8 : day = "수요일"; break;
+		case 4 :
+		case 9 : day = "목요일"; break;	
 		}
 		
-		
-		///////////////////////////////////////////////
-		System.out.printf("차량번호의 끝자리가 %d인 차량은 %s 운행을 제한합니다.",car_num,day);
-
-
+		System.out.printf("차량번호의 끝자리가 %d인 차량은 %s 운행을 제한합니다.",car_num, day);
 	}//end main()
 
 }//end class

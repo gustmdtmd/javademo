@@ -8,19 +8,15 @@ public class HealthRate extends Health {
 
 	private double standardHealth() {
 		// 표준체중 로직구현을 구현하세요.
-		double SW = (height - 100) * 0.9;
-		return SW;
+		double sw= (height-100) * 0.9;
+		return sw;
 	}
 
 	private String rateCheck() {
 		// 비만도를 로직구현을 구현하세요
-		if ((weight - standardHealth()) / standardHealth() * 100 < 10) {
-			return "정상";
-		} else if ((weight - standardHealth()) / standardHealth() * 100 < 20) {
-			return "과체중";
-		} else {
-			return "비만";
-		}
+		double b =(weight-standardHealth())/standardHealth() * 100;
+		String rc = b < 10 ? "정상" : (b < 20 ? "과체중" : "비만");  
+		return rc;
 	}
 
 	// prn()메소드 오버라이딩

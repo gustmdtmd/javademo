@@ -12,12 +12,14 @@ public class Prob_03 {
        int num[]=new int[]{60,95,88};
        //여기를 구현하시오.
        int sum=0;
-       for(int i=0;i<num.length;i++){
-    	   sum+=num[i];
-    	   
+       
+       for(int i=0; i<num.length; i++) {
+    	   sum += num[i];
        }
-       System.out.printf("합계:%4d\n",sum);
-       System.out.printf("평균:%4d",sum/num.length);
+       
+       int avg = sum / num.length;
+       System.out.println("합계: " + sum);
+       System.out.println("평균: " + avg);
 	}//end main()
 
 }//end class

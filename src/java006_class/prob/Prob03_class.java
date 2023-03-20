@@ -24,20 +24,19 @@ class Box {
 
 	public void draw() { // 박스 그리는 메소드
 		///////////// 여기에서 구현하세요.
-		
-		for(int i=1; i<=height; i++) {
-			for(int j=1; j<=width; j++) {
+		for(int i=0; i<height; i++) {
+			for(int j=0; j<width; j++) {
 				System.out.print(fillChar);
 			}
 			System.out.println();
 		}
+	
 
 	}// end draw()
 
 	public void fill(char c) { 
 		// 박스를 그리는데 사용하는 문자 설정
-		this.fillChar = c;
-		
+		this.fillChar=c;
 	}//end fill( )
 }//end class
 
@@ -45,13 +44,15 @@ public class Prob03_class {
 
 	public static void main(String[] args) {
 		//여기를  구현하세요.
-		Box b1 = new Box();
-		b1.fill('&');
-		b1.draw();
-		
-		Box b2 = new Box(20, 3);
-		b2.fill('%');
-		b2.draw();
+		Box a = new Box();
+		Box b = new Box(20,3);
+		Box c = new Box(5,5);
+		a.fill('&');
+		b.fill('%');
+		c.fill('*');
+		a.draw();
+		b.draw();
+		c.draw();
 
 		
 		

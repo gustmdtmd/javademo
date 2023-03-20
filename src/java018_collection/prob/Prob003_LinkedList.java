@@ -17,7 +17,7 @@ public class Prob003_LinkedList {
 		list.add(save("c003","스케이트"));
 		
 		for(Sports sp : list)
-			System.out.printf("종목코드 :  %s, 종목명: %s\n",sp.getCode(),sp.getProgram());
+			System.out.printf("종목코드 :  %s, 종목명 : %s\n",sp.getCode(),sp.getProgram());
      
 	}//end main()
 	

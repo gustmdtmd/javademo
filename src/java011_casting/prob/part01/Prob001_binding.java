@@ -17,7 +17,7 @@ public class Prob001_binding {
 		CPoint a, b;
 		// 여기에서 구현하세요.
 		a = new CPoint(2,3);
-		b = new ColorPoint(3,4,"red");
+		b = new ColorPoint(3, 4,"red");
 		a.show();
 		b.show();
 		System.out.println(a.toString());

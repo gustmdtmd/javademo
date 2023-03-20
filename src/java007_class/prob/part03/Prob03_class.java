@@ -25,12 +25,10 @@ public class Prob03_class {
 	
 	public static void display(Pitcher[] arr){
 		//이름과 투구이닝 자책점 방어율 순으로 출력하는 로직 구현
-//		for(int i=0; i<arr.length; i++) {
-//			System.out.println(arr[i].toString());
-//		}
-		System.out.println("이름      투구이닝      자책점      방어율");
-		for(Pitcher data : arr) {
-			System.out.println(data.toString());
+		System.out.println("    이름      투구이닝      자책점     방어율");
+		for(int i=0; i<arr.length; i++) {
+//			System.out.printf("%7s %7d %10d %10f\n",arr[i].name, arr[i].ini, arr[i].run, arr[i].era);
+			System.out.println(arr[i].toString());
 		}
 	}//end display( )
 

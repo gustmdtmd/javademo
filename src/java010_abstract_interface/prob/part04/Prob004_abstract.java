@@ -35,13 +35,11 @@ public class Prob004_abstract {
 		 *    "주민번호 13자리를 입력하세요" 
 		 *  처럼 출력이 되도록 로직 구현 
 		 */		
-		
-		if(data.getJumin().length()==13)
-			System.out.printf("%s %d년 %d월 %d일 %c 태생\n",
-					data.getName(),data.getYear(),
-					data.getMonth(),data.getDATE(),data.gender());
+		if(data.jumin.length() == 13)
+			System.out.printf("%s %d년 %d월 %d일 %c 태생\n", data.getName(), data.getYear(), data.getMonth(), data.getDATE(), data.gender());
 		else
-			System.out.println("주민번호 13자리를 입력하세요");
+			System.out.println("주민번호 13자리를 입력하세요.");
+		
 		
 	}//end process()
    

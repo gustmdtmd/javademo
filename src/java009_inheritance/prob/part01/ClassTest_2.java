@@ -14,7 +14,7 @@ public class ClassTest_2 extends ClassTest_1 {
 	
 	@Override
 	public void getInformation() {
-		System.out.println("이름:" + getName() + " 연봉:" + getSalary() + " 부서:" + department);
+		System.out.printf("이름: %s 연봉: %d 부서: %s", getName(), getSalary(), department);
 	}
 	
 	@Override

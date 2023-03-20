@@ -24,11 +24,10 @@ public class Prob06 {
 
 	public static void main(String[] args) {
 		String grade = "대리"; // 직급
-		int overtime = 13; // 총 초과근무시간
+		int overtime = 20; // 총 초과근무시간
 		int money = 0; // 수령 월급
 
 		/////////// 여기에서 구현하세요. /////////
-
 		switch (grade) {
 		case "과장":
 			money = 250;
@@ -40,16 +39,14 @@ public class Prob06 {
 			money = 150;
 		}
 		
-		
-		if (overtime >= 20) {
+		if(overtime >= 20)
 			money += 20;
-		} else if (overtime < 10) {
-		} else {
+		else if(overtime >= 10)
 			money += 10;
-		}
+		else
+			money += 0;
 
 		//////////////////////////////////////
-
 		System.out.printf("직급은 %s이며, 이번달 초과근무는 총 %d시간을 하셨습니다.\n", grade, overtime);
 		System.out.printf("수령하실 월급은 %d만원입니다.\n", money);
 	}// end

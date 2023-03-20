@@ -17,12 +17,12 @@ public class Prob004_method {
 		int cnt = 0; // 3의 배수 개수
 		int sum = 0; // 3의 배수 합
 		// 여기에 3의 배수의 개수와 합을 구하는 코드를 작성하세요.
-		for (int i = 0; i < data.length; i++) {
-			if (data[i] % 3 == 0) {
+		for(int i=0; i<data.length; i++){
+			if(data[i]%3==0) {
 				cnt++;
-				sum += data[i];
-			} // if end
-		} // for end
+				sum+=data[i];
+			}
+		}
 
 		////////////////////////////////////////////
 		System.out.println("주어진 배열에서 3의 배수의 개수=>" + cnt);

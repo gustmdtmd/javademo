@@ -31,12 +31,12 @@ import java.io.*;
 class Prob04 {
 	public static void main(String[] args) throws IOException {
 
-		int kor = 35;
-		int eng = 40;
-		int mat = 22;
+		int kor = 80;
+		int eng = 80;
+		int mat = 40;
 		int tot = 0;
 		double avg;
-
+		
 		System.out.printf("국어점수입력 : %d\n", kor);
 		System.out.printf("영어점수입력 : %d\n", eng);
 		System.out.printf("수학점수입력 : %d\n", mat);
@@ -45,16 +45,16 @@ class Prob04 {
 		avg = tot / 3.0;
 
 		// 여기에 구현하시오.
-
-		if (avg >= 60.0) {
-			if (!(kor >= 40 && eng >= 40 && mat >= 40)) {
-				System.out.println("과락으로 불합격");
-			} else {
-				System.out.println("합격");
+		if(avg < 60) {
+			System.out.println("불합격입니다.");
+		}else {
+			if(kor >= 40 && eng >= 40 && mat >= 40) {
+				System.out.println("합격입니다.");
+			}else {
+				System.out.println("과락으로 불합격입니다.");
 			}
-		} else {
-			System.out.println("불합격");
 		}
+		
 
 	}// end main()
 }// end class

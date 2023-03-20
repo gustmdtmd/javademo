@@ -68,7 +68,7 @@ public class Student {
 	}
 	
 	public double getAvg() {
-		return getTotal()/3;
+		return getTotal()/3.0;
 	}
 	
 	public char getGrade() {

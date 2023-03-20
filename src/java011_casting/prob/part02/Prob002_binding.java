@@ -16,12 +16,11 @@ public class Prob002_binding {
 
 		/* Engineer는 급여의 13%, Devloper는 15%를 특별보너스로 지급하는 프로그램을 구현하세요. */
 
-		System.out.println("이름     급여      정규보너스   특별보너스");
+		System.out.println("이름     급여      정규보너스  특별보너스");
 		System.out.println("=============================================");
-		for(int i=0; i<em.length; i++) {
-			System.out.println(em[i].toString());	
+		for(Employee ep : em) {
+			System.out.println(ep.toString());
 		}
-		
 		//////////////////////////////////////
 
 	}

@@ -13,12 +13,12 @@ public class Prob003_method {
 	public static char[] process(char[] data) {
 		// data배열의 요소가 '_'이면 ' '으로 변경후 리턴하는
 		// 프로그램을 구현하시오.
-		for(int i = 0; i<data.length; i++) {
-			if(data[i] == '_') {
+		for(int i=0; i<data.length; i++) {
+			if(data[i]=='_') {
 				data[i] = ' ';
-			}//if end
-		}//for end
-		
+			}
+		}
+	
 		return data;
 	}// end process()
 

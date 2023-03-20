@@ -19,10 +19,10 @@ public class Prob01_class {
 		System.out.println(em.toString());
 		
 		em.setEmployee("진달래", "경리부", 1200000, 75.34);
-		System.out.println("사원이름: " + em.getName());
-		System.out.println("근무부서: " + em.getDept());
-		System.out.println("받는급여: " + em.getPay());
-		System.out.println("입사점수: " + em.getScore());
+		System.out.println("사원이름 : " + em.getName());
+		System.out.println("근무부서 : " + em.getDept());
+		System.out.println("받는급여 : " + em.getPay());
+		System.out.println("입사점수 : " + em.getScore());
 	}
 }
 

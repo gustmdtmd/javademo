@@ -16,18 +16,14 @@ public class Prob05 {
 	public static void main(String[] args) {
 		int ko = 90;
 		int en = 45;
-		int jp = 22;
+		int jp = 50;
 		int hap = ko + en + jp;
 
 		// 여기에 구현하세요.
 		
-		//double avg = hap/3.0;
-		//System.out.println(avg);
-		
-		double avg = (double)hap/3;
-		String chk= avg>=60 ? "합격" : "불합격";
-		System.out.printf("%.1f점, %s입니다.\n", avg, chk);
-        
+		float avg = hap / 3;
+		String res = avg >= 60.0 ? "합격" : "불합격";
+		System.out.printf("평균 %.1f점, %s입니다.", avg, res);
 	}//end main()
 
 }//end class

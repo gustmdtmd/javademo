@@ -9,7 +9,7 @@ package java009_inheritance.prob.part04;
  HealthRate 클래스에 아래 사항을 추가합니다.
  1 표준체중 계산하는 메소드를 정의한다. 
  2 비만도를 계산하는 메소드를 정의한다.
- 비만도가 10% 이내이면 정상, 10%이상 20%이면 과체중, 20% 이상은 비만
+ 비만도가 10% 미만이면 정상, 10%이상 20%미만이면 과체중, 20% 이상은 비만
 
  
  3 출력결과
@@ -26,6 +26,9 @@ class Prob04_inheritance {
 		
 		HealthRate hr2 = new HealthRate("박둘이", 168, 90);
 		hr2.prn();
+		
+		HealthRate hr3 = new HealthRate("이현승", 176, 80);
+		hr3.prn();
 	}//end main()
 }//end class
 

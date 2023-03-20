@@ -35,18 +35,16 @@ public class Prob_05 {
 				{ 3, 1, 1, 2, 4, 1, 2, 3, 1, 3 } 
 				};
 		int[] ans = { 1, 2, 3, 4, 4, 3, 2, 1, 1, 2 };
-		int jum;
+		int[] jum = {0,0,0,0,0};
 		
-		for (int i = 0; i < sub.length; i++) {
-			jum=0;
-			for (int j = 0; j < sub[i].length; j++) {
-				if (sub[i][j] == ans[j]) {
-					jum+=1;
-				} // if end
-			} // for end
-			System.out.printf("%s 점수 : %d점\n", name[i],jum);
-		} // for end
-
+		for(int i=0; i<sub.length; i++) {
+			for(int j=0; j<ans.length; j++) {
+				if(ans[j]==sub[i][j])
+					jum[i]+=1;
+			}
+			System.out.printf("%s 점수 : %d점\n", name[i], jum[i]);
+		}
+		
 	}// end main()
 
 }// end class

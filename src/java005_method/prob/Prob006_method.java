@@ -12,17 +12,17 @@ public class Prob006_method {
 	private static void primeNumber(int num) {
 		// 구현하세요.
 
-		for (int i = 2; i <= num; i++) {
-			for (int j = 2; j <= i; j++) {
-				if (i % j == 0) {
-					if (i == j) {
-						System.out.printf(i + ", ");
-					} else {
+		for(int i=2; i<=num; i++) {
+			for(int j=2; j<=num; j++) {
+				if(i%j==0) {
+					if(i==j) {
+						System.out.println("소수: "+ i);
+					}else {
 						break;
-					} // if end
-				} // if end
-			} // for end
-		} // for end
+					}
+				}
+			}
+		}
 
 	}// end primeNumber( )
 }// end class

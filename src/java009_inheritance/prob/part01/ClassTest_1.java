@@ -22,7 +22,7 @@ public class ClassTest_1 {
 	}
 
 	public void getInformation() {
-		System.out.println("이름:" + name + " 연봉:" + salary);
+		System.out.printf("이름: %s 연봉: %d", name, salary);
 	}
 
 	public void prn() {

@@ -1,4 +1,5 @@
 package java012_api.prob;
+
 /*
  * 1. 문자열(String)을 입력 받아, 해당 문자열을 
  *    문자 순서를 뒤집어서 char[]로 반환하는 메소드를 만들고,
@@ -7,7 +8,7 @@ package java012_api.prob;
  *    dlroW olleH
  *    !gnimmargorP avaJ
  */
-public class Prob002_String { 
+public class Prob002_String {
 
 	public static void main(String[] args) {
 		char[] array1 = reverse("Hello World");
@@ -18,21 +19,16 @@ public class Prob002_String {
 	}// end main()
 
 	public static char[] reverse(String str) {
-		//여기를 구현하세요.
+		// 여기를 구현하세요.
 		char[] reverse = new char[str.length()];
-		for(int i=reverse.length-1; i>=0; i--) {
-			reverse[i] = str.charAt(reverse.length-1-i);
+		for (int i = 0; i < str.length(); i++) {
+			reverse[i] += str.charAt(str.length()-1-i);
 		}
 		return reverse;
-	}//end reverse()
+	}// end reverse()
 
 	public static void printCharArray(char[] array) {
-		System.out.println(array); 
-	}//end printCharArray()
+		System.out.println(array);
+	}// end printCharArray()
 
 }
-
-
-
-
-

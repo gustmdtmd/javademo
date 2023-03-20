@@ -16,12 +16,12 @@ public class Prob005_method {
 		int cnt = 0;
 		int sum = 0;
 
-		for (int i = 0; i < data.length; i++) {
-			if (!(data[i] % 2 == 0 || data[i] % 5 == 0)) {
-				cnt++;
+		for(int i=0; i<data.length; i++) {
+			if(data[i]%2==0 || data[i]%5==0) {
+				cnt += 1;
 				sum += data[i];
-			} // if end
-		} // for end
+			}
+		}
 		System.out.printf("2 or 5의 배수가 아닌 갯수 : %d\n", cnt);
 		System.out.printf("2 or 5의 배수가 아닌 합계 : %d\n", sum);
 

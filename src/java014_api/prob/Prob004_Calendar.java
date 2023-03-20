@@ -57,13 +57,13 @@ public class Prob004_Calendar {
 					break label;
 			}
 		}
-		return null;
+		return data;
 	}
 
 	public static void prn(int arr[][], int year, int month) {
-		System.out.printf("%13d년도  %6d월\n", year, month);
+		System.out.printf("%13d년도  %4d월\n", year, month);
 
-		System.out.println("       일  월  화  수  목  금  토");
+		System.out.println("  일   월   화  수   목  금   토");
 		for(int i=0; i<6; i++) {
 			for(int j=0; j<7; j++) {
 				if(arr[i][j] == 0) 

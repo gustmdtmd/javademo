@@ -19,34 +19,19 @@ package java002_statements.answ;
 public class Prob02 {
 
 	public static void main(String[] args) {
-		char code = 'A';
+		char code = 'D';
 		String menu = "";
 		int price = 0;
 
 		// switch~case문을 이용해서 프로그램을 코딩하시요.
-		switch (code) {
-		case 'A':
-			price = 7500;
-			menu = "짬뽕";
-			break;
-		case 'B':
-			price = 6000;
-			menu = "만두";
-			break;
-		case 'C':
-			price = 5000;
-			menu = "짜장";
-			break;
-		case 'D':
-			price = 4000;
-			menu = "라면";
-			break;
-		default:
-			System.out.println("제공하지 않는 메뉴입니다");
-			return;
+		switch(code) {
+		case 'A' : price=7500; menu="짬뽕"; break;
+		case 'B' : price=6000; menu="만두"; break;
+		case 'C' : price=5000; menu="짜장"; break;
+		case 'D' : price=4000; menu="라면";
 		}
-
-		System.out.printf("%s메뉴 가격은 %d원입니다.", menu, price);
+		
+		System.out.printf("code의 값이 '%c'일 때 => %s메뉴 가격은 %d원입니다.", code, menu, price);
 
 	}// end main()
 
